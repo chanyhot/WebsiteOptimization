@@ -8,7 +8,7 @@
 
 ## 如何运行
 
-下载代码至本地，在项目目录下运行`npm install`，运行gulp，会生成_dist_目录，在dist目录下建立web服务器运行，如(nodejs环境)：
+下载代码至本地，在项目目录下运行`npm install`，运行gulp，会生成__dist__目录，在dist目录下建立web服务器运行，如(nodejs环境)：
 
 ```
 cd WebsiteOptimization
