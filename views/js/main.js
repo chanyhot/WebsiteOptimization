@@ -446,7 +446,7 @@ var resizePizzas = function(size) {
 
   // 遍历披萨的元素并改变它们的宽度
   function changePizzaSizes(size) {
-    var domArray = document.querySelectorAll(".randomPizzaContainer");
+    var domArray = document.getElementsByClassName("randomPizzaContainer");
     var dx = determineDx(domArray[0], size);
     var newwidth = (domArray[0].offsetWidth + dx) + 'px';
     for (var i = 0; i < domArray.length; i++) {
@@ -499,7 +499,7 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.querySelectorAll('.mover');
+  var items = document.getElementsByClassName('mover');
   var scrollTop = document.body.scrollTop;
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((scrollTop / 1250) + (i % 5));
@@ -523,7 +523,8 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
+  var num = (window.screen.height / 100) * cols;
+  for (var i = 0; i < num; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
